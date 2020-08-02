@@ -6,9 +6,9 @@ node {
                 // Make the output directory.
 
                 echo "debug"
-                sh "mkdir -p output"
-
-                sh "ls -r"
+                //sh "mkdir -p output"
+                sh "mkdir output"
+                //sh "ls -r"
 
 
                 // Write an useful file, which is needed to be archived.
@@ -26,8 +26,8 @@ node {
       // sh " echo https://github.com/lzjun567/python_scripts |  /usr/bin/python   02_find_all_links.py >testlog.log"
      //  sh "diff testlog.log reflog.log"
 
-        sh "sh ./SUT.sh >testlog.txt "
-        sh "cat testlog.txt"
+        //sh "sh ./SUT.sh >testlog.txt "
+        //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py >testlog.txt"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
