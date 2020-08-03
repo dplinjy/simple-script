@@ -21,7 +21,7 @@ class TestCalculation(unittest.TestCase):
         a = 3
         b = 4
         result = Calculation.multiple(a, b)
-        assert result == 12
+        assert result == 120
 
     def test_divide(self):
         a = 30
