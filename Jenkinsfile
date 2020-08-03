@@ -4,7 +4,7 @@ node {
                 sh "rm -rf *"
                 git 'https://github.com/dplinjy/simple-script.git'
                 // Make the output directory.
-
+                sh "ls -l"
                 echo "debug"
 
                 //sh "mkdir -p output"
@@ -28,15 +28,16 @@ node {
 
         //sh "sh ./SUT.sh >testlog.txt "
         echo "run py......"
-        timeout(6) {
-            waitUntil {
-                sh "python -m unittest -v testCalculate.py"
-            }
-        }
-
+        //timeout(6) {
+        //    waitUntil {
+        //        sh "python -m unittest -v testCalculate.py"
+        //    }
+        //}
+        sh "python -m unittest -v testCalculate.py"
+        sh "ls -l"
         echo "analyse result......"
         sh "cat ./TestResult.txt > ./output/test_log.txt"
-        sh "ls"
+        sh "ls -l"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
         //sh "${result}"
