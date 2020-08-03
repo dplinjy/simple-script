@@ -56,7 +56,7 @@ node {
             //throw exc
         //}
         try {
-            assertEquals(buildResult, false)
+            assert buildResult == false
         } catch (AssertionError e) {
             throw e
         }
