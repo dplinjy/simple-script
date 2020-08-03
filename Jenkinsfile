@@ -48,9 +48,11 @@ node {
         //archiveArtifacts artifacts: '*.sh', excludes: '*.md'
         //archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
         //sh "cat diff.txt"
-        String readString = readFile("output/test_log.txt")
-        echo "test print readFile"
-        echo readString
+
+
+        //String readString = readFile("output/test_log.txt")
+        //echo "test print readFile"
+        //echo readString
         //Boolean buildResult = readString.matches("(.*)FAIL(.*)")
 
         //try {
