@@ -30,8 +30,6 @@ class TestCalculation(unittest.TestCase):
         assert result == 6
 
 
-# if __name__ == '__main__':
-    # unittest.main()
 suites = unittest.TestSuite()
 tests = [TestCalculation("test_add"), TestCalculation("test_minus"), TestCalculation("test_multiply"), TestCalculation("test_divide")]
 suites.addTests(tests)
