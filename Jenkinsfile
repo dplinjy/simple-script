@@ -30,8 +30,10 @@ node {
         //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py"
         sh "python testCalculate.py"
-        sh "TestResult=$(cat TestResult.txt)"
-        echo "${TestResult}"
+        def result = readFile("TestResult.txt")
+        sh "${result}"
+        //sh "TestResult=$(cat TestResult.txt)"
+        //echo "${TestResult}"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
         //sh "cp diff.txt diff.sh"
