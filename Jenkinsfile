@@ -48,6 +48,9 @@ node {
         //archiveArtifacts artifacts: '*.sh', excludes: '*.md'
         //archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
         //sh "cat diff.txt"
+        readString = readFile("output/test_log.txt")
+        echo "test print readFile"
+        echo ${readString}
 
     }
     stage('Deploy') {
