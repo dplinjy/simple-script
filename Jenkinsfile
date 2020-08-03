@@ -10,7 +10,6 @@ node {
                 //sh "mkdir output"
                 //sh "ls -r"
 
-
                 // Write an useful file, which is needed to be archived.
                 //writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
                 writeFile file: "output/testlog.txt", text: ""
@@ -29,7 +28,9 @@ node {
         //sh "sh ./SUT.sh >testlog.txt "
         //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py"
+        echo "run py..."
         sh "python testCalculate.py"
+        echo "analyse result..."
         def result = readFile("TestResult.txt")
         sh "${result}"
         //sh "TestResult=$(cat TestResult.txt)"
