@@ -7,7 +7,7 @@ node {
 
                 echo "debug"
                 //sh "mkdir -p output"
-                sh "mkdir output"
+                //sh "mkdir output"
                 //sh "ls -r"
 
 
