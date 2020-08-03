@@ -1,17 +1,14 @@
 node {
     stage('Build') {
                 echo "checkout from SCM"
-
+                sh "rm -rf *"
                 git 'https://github.com/dplinjy/simple-script.git'
                 // Make the output directory.
 
                 echo "debug"
-                sh "rm testlog2.txt"
-                sh "rm SUT.sh"
-                sh "rm TestResult.txt"
 
                 //sh "mkdir -p output"
-                //sh "mkdir output"
+                sh "mkdir output"
                 //sh "ls -r"
                 sh "ls -r"
                 // Write an useful file, which is needed to be archived.
