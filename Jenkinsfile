@@ -48,7 +48,7 @@ node {
         //sh "cp diff.txt diff.sh"
           // Archive the build output artifacts.
         //archiveArtifacts artifacts: '*.sh', excludes: '*.md'
-        //archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
+        archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
         //sh "cat diff.txt"
 
     }
