@@ -15,13 +15,12 @@ node {
                 archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
     }
     stage('Test') {
-      // sh " echo https://github.com/lzjun567/python_scripts |  /usr/bin/python   02_find_all_links.py >testlog.log"
 
         echo "========== run py =========="
         sh "python -m unittest -v testCalculate.py"
         sh "ls -l"
         echo "========== analyse result =========="
-        sh "cat ./TestResult.txt > output/test_log.txt"
+        sh "cat ./TestResult.txt >output/test_log.txt"
         sh "ls -l"
         archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
         //String readString = readFile("output/test_log.txt")
