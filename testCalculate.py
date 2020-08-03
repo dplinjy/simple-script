@@ -30,10 +30,9 @@ class TestCalculation(unittest.TestCase):
         assert result == 6
 
 
-if __name__ == '__main__':
-    suites = unittest.TestSuite()
-    tests = [TestCalculation("test_add"), TestCalculation("test_minus"), TestCalculation("test_multiply"), TestCalculation("test_divide")]
-    suites.addTests(tests)
-    with open("TestResult.txt", "w") as f:
-        runner = unittest.TextTestRunner(stream=f, verbosity=2)
-        runner.run(suites)
+suites = unittest.TestSuite()
+tests = [TestCalculation("test_add"), TestCalculation("test_minus"), TestCalculation("test_multiply"), TestCalculation("test_divide")]
+suites.addTests(tests)
+with open("TestResult.txt", "w") as f:
+    runner = unittest.TextTestRunner(stream=f, verbosity=2)
+    runner.run(suites)
