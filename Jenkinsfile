@@ -12,10 +12,10 @@ node {
 
 
                 // Write an useful file, which is needed to be archived.
-                writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
-
+                //writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
+                writeFile file: "output/testlog.txt"
                 // Write an useless file, which is not needed to be archived.
-                writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
+                //writeFile file: "output/uselessfile.md", text: "This file is useless, no need to archive it."
 
                 echo "Archive build output"
 
@@ -28,7 +28,7 @@ node {
 
         //sh "sh ./SUT.sh >testlog.txt "
         //sh "cat testlog.txt"
-        //sh "python -m unittest -v testCalculate.py >testlog.txt"
+        sh "python -m unittest -v testCalculate.py >testlog.txt"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
         //sh "cp diff.txt diff.sh"
