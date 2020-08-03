@@ -30,8 +30,10 @@ node {
         //sh "python -m unittest -v testCalculate.py"
         echo "run py..."
         sh "python -m unittest -v testCalculate.py"
+        sh "ls"
         echo "analyse result..."
-        sh "cat ./TestResult.txt > ./output/testlog.txt"
+        //sh "cat ./TestResult.txt > ./output/testlog.txt"
+        sh "cat ./TestResult.txt"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
         //sh "${result}"
@@ -49,6 +51,6 @@ node {
     stage('Deploy') {
        //sh "sh checkempty.sh "
        //sh "cat "
-       sh "cat testlog.txt"
+       sh "cat ./output/testlog.txt"
     }
 }
