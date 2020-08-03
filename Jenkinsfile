@@ -58,6 +58,7 @@ node {
         try {
             assert buildResult == false
         } catch (AssertionError e) {
+            echo "exception found......"
             throw e
         }
 
