@@ -6,6 +6,10 @@ node {
                 // Make the output directory.
 
                 echo "debug"
+                sh "rm testlog2.txt"
+                sh "rm SUT.sh"
+                sh "rm TestResult.txt"
+
                 //sh "mkdir -p output"
                 //sh "mkdir output"
                 //sh "ls -r"
