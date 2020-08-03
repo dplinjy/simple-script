@@ -28,7 +28,7 @@ node {
 
         //sh "sh ./SUT.sh >testlog.txt "
         //sh "cat testlog.txt"
-        sh "python -m unittest -v testCalculate.py >testlog.txt"
+        sh "python -m unittest -v testCalculate.py | tee testlog.txt"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
         //sh "cp diff.txt diff.sh"
