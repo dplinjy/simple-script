@@ -9,7 +9,7 @@ node {
                 //sh "mkdir -p output"
                 //sh "mkdir output"
                 //sh "ls -r"
-                sh "rm ./testlog.txt"
+                //sh "rm ./testlog.txt"
                 sh "rm ./SUT.sh"
                 sh "rm ./output/testlog.txt"
                 sh "rm ./output/testlog2.txt"
