@@ -28,9 +28,10 @@ node {
 
         //sh "sh ./SUT.sh >testlog.txt "
         //sh "cat testlog.txt"
-        sh "script"
-        sh "python -m unittest -v testCalculate.py"
-        sh "cat typescript >testlog.txt"
+        //sh "python -m unittest -v testCalculate.py"
+        echo "python testCalculate.py"
+        TestResult="$(cat TestResult.txt)"
+        echo "${TestResult}"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
         //sh "cp diff.txt diff.sh"
@@ -43,6 +44,6 @@ node {
     stage('Deploy') {
        //sh "sh checkempty.sh "
        //sh "cat "
-       sh "cat testlog.txt"
+       //sh "cat testlog.txt"
     }
 }

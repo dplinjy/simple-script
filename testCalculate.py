@@ -3,6 +3,7 @@
 import unittest
 from calculate import Calculation
 
+
 class TestCalculation(unittest.TestCase):
     def test_add(self):
         a = 1
@@ -30,4 +31,10 @@ class TestCalculation(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    unittest.main()
+    # unittest.main()
+    suites = unittest.TestSuite()
+    tests = [TestCalculation("test_add"), TestCalculation("test_minus"), TestCalculation("test_multiply"), TestCalculation("test_divide")]
+    suites.addTests(tests)
+    with open("TestResult.txt", "w") as f:
+        runner = unittest.TextTestRunner(stream=f, verbosity=2)
+        runner.run(suites)
