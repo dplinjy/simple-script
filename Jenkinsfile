@@ -24,9 +24,7 @@ node {
     }
     stage('Test') {
       // sh " echo https://github.com/lzjun567/python_scripts |  /usr/bin/python   02_find_all_links.py >testlog.log"
-     //  sh "diff testlog.log reflog.log"
 
-        //sh "sh ./SUT.sh >testlog.txt "
         echo "run py......"
         //timeout(6) {
         //    waitUntil {
@@ -36,7 +34,7 @@ node {
         sh "python -m unittest -v testCalculate.py"
         sh "ls -l"
         echo "analyse result......"
-        sh -c "cat ./TestResult.txt > ./output/test_log.txt"
+        sh "cat ./TestResult.txt > output/test_log.txt"
         sh "ls -l"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
@@ -53,6 +51,6 @@ node {
 
     }
     stage('Deploy') {
-       sh "cat ./output/test_log.txt"
+       sh "cat output/test_log.txt"
     }
 }
