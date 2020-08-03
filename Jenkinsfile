@@ -9,6 +9,8 @@ node {
                 //sh "mkdir -p output"
                 //sh "mkdir output"
                 //sh "ls -r"
+                sh "rm testlog.txt"
+                sh "rm SUT.sh"
 
                 // Write an useful file, which is needed to be archived.
                 //writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
@@ -33,7 +35,8 @@ node {
         sh "ls"
         echo "analyse result..."
         //sh "cat ./TestResult.txt > ./output/testlog.txt"
-        sh "cat ./TestResult.txt > ./output/testlog2.txt"
+        sh "cat ./TestResult.txt > testlog2.txt"
+        sh "ls"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
         //sh "${result}"
@@ -51,6 +54,6 @@ node {
     stage('Deploy') {
        //sh "sh checkempty.sh "
        //sh "cat "
-       sh "cat ./output/testlog2.txt"
+       sh "cat testlog2.txt"
     }
 }
