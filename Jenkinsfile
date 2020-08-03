@@ -30,7 +30,7 @@ node {
         //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py"
         echo "python testCalculate.py"
-        TestResult="$(cat TestResult.txt)"
+        sh "string=$(cat TestResult.txt)"
         echo "${TestResult}"
         //sh "diff testlog.txt reflog.txt"
         //sh "diff testlog.txt reflog.txt >diff.txt"
