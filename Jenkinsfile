@@ -29,7 +29,7 @@ node {
         //sh "sh ./SUT.sh >testlog.txt "
         //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py"
-        echo "python testCalculate.py"
+        sh "python testCalculate.py"
         sh "TestResult=$(cat TestResult.txt)"
         echo "${TestResult}"
         //sh "diff testlog.txt reflog.txt"
