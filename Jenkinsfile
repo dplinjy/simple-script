@@ -52,8 +52,13 @@ node {
         echo "test print readFile"
         echo readString
         Boolean buildResult = readString.matches("(.*)FAIL(.*)")
-        if (!buildResult) {
-            throw exc
+        //if (!buildResult) {
+            //throw exc
+        //}
+        try {
+            assertEquals(buildResult, false)
+        } catch (AssertionError e) {
+            throw e
         }
 
     }
