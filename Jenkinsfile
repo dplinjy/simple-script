@@ -41,5 +41,6 @@ node {
     stage('Deploy') {
        //sh "sh checkempty.sh "
        //sh "cat "
+       sh "cat testlog.txt"
     }
 }
