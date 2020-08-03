@@ -34,7 +34,7 @@ node {
         sh "python -m unittest -v testCalculate.py"
         sh "ls -l"
         echo "analyse result......"
-        sh "cat ./TestResult.txt > output/test_log.txt"
+        sh "cat ./TestResult.txt > ./output/test_log.txt"
         sh "ls -l"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
@@ -46,7 +46,7 @@ node {
         //sh "cp diff.txt diff.sh"
           // Archive the build output artifacts.
         //archiveArtifacts artifacts: '*.sh', excludes: '*.md'
-        archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
+        //archiveArtifacts artifacts: 'output/*.txt', excludes: 'output/*.md'
         //sh "cat diff.txt"
 
     }
