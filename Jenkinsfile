@@ -29,7 +29,7 @@ node {
         //sh "cat testlog.txt"
         //sh "python -m unittest -v testCalculate.py"
         echo "run py..."
-        sh "python testCalculate.py"
+        sh "python -m unittest -v testCalculate.py"
         echo "analyse result..."
         //def result = readFile("TestResult.txt")
         result = readFile("TestResult.txt")
