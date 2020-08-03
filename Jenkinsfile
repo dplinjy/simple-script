@@ -32,8 +32,8 @@ node {
         sh "python -m unittest -v testCalculate.py"
         echo "analyse result..."
         //def result = readFile("TestResult.txt")
-        result = readFile("TestResult.txt")
-        sh "${result}"
+        //result = readFile("TestResult.txt")
+        //sh "${result}"
         //sh "TestResult=$(cat TestResult.txt)"
         //echo "${TestResult}"
         //sh "diff testlog.txt reflog.txt"
