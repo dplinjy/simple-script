@@ -51,7 +51,7 @@ node {
         String readString = readFile("output/test_log.txt")
         echo "test print readFile"
         echo readString
-        Boolean buildResult = readString.matches(".*FAIL.*")
+        Boolean buildResult = readString.matches("(.*)FAIL(.*)")
         if (!buildResult) {
             throw exc
         }
