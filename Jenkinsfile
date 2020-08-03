@@ -28,7 +28,12 @@ node {
 
         //sh "sh ./SUT.sh >testlog.txt "
         echo "run py......"
-        sh "python -m unittest -v testCalculate.py"
+        timeout(6) {
+            waitUntil {
+                sh "python -m unittest -v testCalculate.py"
+            }
+        }
+
         echo "analyse result......"
         sh "cat ./TestResult.txt > ./output/test_log.txt"
         sh "ls"
