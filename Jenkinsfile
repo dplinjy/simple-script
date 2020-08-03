@@ -9,12 +9,7 @@ node {
                 //sh "mkdir -p output"
                 //sh "mkdir output"
                 //sh "ls -r"
-                //sh "rm ./testlog.txt"
-                sh "rm ./SUT.sh"
-                sh "rm ./output/testlog.txt"
-                sh "rm ./output/testlog2.txt"
-                sh "rm ./output/usefulfile.txt"
-                sh "ls"
+                sh "ls -r"
                 // Write an useful file, which is needed to be archived.
                 //writeFile file: "output/usefulfile.txt", text: "This file is useful, need to archive it."
                 writeFile file: "output/test_log.txt", text: ""
@@ -31,13 +26,9 @@ node {
      //  sh "diff testlog.log reflog.log"
 
         //sh "sh ./SUT.sh >testlog.txt "
-        //sh "cat testlog.txt"
         echo "run py......"
         sh "python -m unittest -v testCalculate.py"
-        sh "ls"
         echo "analyse result......"
-        //sh "cat ./TestResult.txt > ./output/testlog.txt"
-        sh "cat ./TestResult.txt > testlog2.txt"
         sh "cat ./TestResult.txt > ./output/test_log.txt"
         sh "ls"
         //def result = readFile("TestResult.txt")
@@ -55,11 +46,6 @@ node {
 
     }
     stage('Deploy') {
-       //sh "sh checkempty.sh "
-       //sh "cat "
-       echo "print ./output/test_log.txt"
        sh "cat ./output/test_log.txt"
-       echo "print ./testlog2.txt"
-       sh "cat ./testlog2.txt"
     }
 }
