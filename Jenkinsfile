@@ -31,7 +31,7 @@ node {
         echo "run py..."
         sh "python -m unittest -v testCalculate.py"
         echo "analyse result..."
-        sh "./TestResult.txt > ./output/testlog.txt"
+        sh "cat ./TestResult.txt > ./output/testlog.txt"
         //def result = readFile("TestResult.txt")
         //result = readFile("TestResult.txt")
         //sh "${result}"
