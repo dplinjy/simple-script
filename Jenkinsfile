@@ -38,5 +38,6 @@ node {
     }
     stage('Deploy') {
        sh "cat output/test_log.txt"
+       sh "pwd"
     }
 }
