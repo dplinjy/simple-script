@@ -3,7 +3,7 @@
 class Calculation(object):
     @staticmethod
     def add(a, b):
-        return a+b+1
+        return a+b
     @staticmethod
     def minus(a, b):
         return a-b
